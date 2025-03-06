@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: Checkout Main
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.1
         with:
           path: main
           submodules: recursive
