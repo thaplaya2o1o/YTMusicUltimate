@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: Checkout Main
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4
         with:
           path: main
           submodules: recursive
@@ -60,7 +60,7 @@ jobs:
 
       - name: Cache Theos
         id: theos
-        uses: actions/cache@v4.0.1
+        uses: actions/cache@v4
         env:
           cache-name: theos_cache_67db2ab
         with:
@@ -70,7 +70,7 @@ jobs:
 
       - name: Setup Theos
         if: steps.theos.outputs.cache-hit != 'true'
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4
         with:
           repository: theos/theos
           ref: 67db2ab8d950910161730de77c322658ea3e6b44
